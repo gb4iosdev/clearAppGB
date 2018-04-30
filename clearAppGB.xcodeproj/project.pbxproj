@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8625F75D20975F7300D14CFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8625F75C20975F7300D14CFC /* TableViewCell.swift */; };
 		863ED5C72096AA3000A46441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863ED5C62096AA3000A46441 /* AppDelegate.swift */; };
 		863ED5C92096AA3000A46441 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863ED5C82096AA3000A46441 /* ViewController.swift */; };
 		863ED5CC2096AA3000A46441 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863ED5CA2096AA3000A46441 /* Main.storyboard */; };
 		863ED5CE2096AA3000A46441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863ED5CD2096AA3000A46441 /* Assets.xcassets */; };
 		863ED5D12096AA3000A46441 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863ED5CF2096AA3000A46441 /* LaunchScreen.storyboard */; };
+		863ED5D92096AB3200A46441 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863ED5D82096AB3200A46441 /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8625F75C20975F7300D14CFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		863ED5C32096AA3000A46441 /* clearAppGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clearAppGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863ED5C62096AA3000A46441 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863ED5C82096AA3000A46441 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		863ED5CD2096AA3000A46441 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		863ED5D02096AA3000A46441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		863ED5D22096AA3000A46441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863ED5D82096AB3200A46441 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8625F75E20975F7B00D14CFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				863ED5D82096AB3200A46441 /* ToDoItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8625F75F20975F9500D14CFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				863ED5CA2096AA3000A46441 /* Main.storyboard */,
+				8625F75C20975F7300D14CFC /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8625F76020977D5A00D14CFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				863ED5C82096AA3000A46441 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		863ED5BA2096AA3000A46441 = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				863ED5C62096AA3000A46441 /* AppDelegate.swift */,
-				863ED5C82096AA3000A46441 /* ViewController.swift */,
-				863ED5CA2096AA3000A46441 /* Main.storyboard */,
+				8625F75E20975F7B00D14CFC /* Model */,
+				8625F75F20975F9500D14CFC /* View */,
+				8625F76020977D5A00D14CFC /* Controller */,
 				863ED5CD2096AA3000A46441 /* Assets.xcassets */,
 				863ED5CF2096AA3000A46441 /* LaunchScreen.storyboard */,
 				863ED5D22096AA3000A46441 /* Info.plist */,
@@ -137,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				863ED5C92096AA3000A46441 /* ViewController.swift in Sources */,
+				8625F75D20975F7300D14CFC /* TableViewCell.swift in Sources */,
 				863ED5C72096AA3000A46441 /* AppDelegate.swift in Sources */,
+				863ED5D92096AB3200A46441 /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
