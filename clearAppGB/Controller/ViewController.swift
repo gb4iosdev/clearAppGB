@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,10 +52,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         ///Gets rid of the highlighting that happens when you select a table cell
-        cell.selectionStyle = .none
+        //cell.selectionStyle = .none
         
-        cell.textLabel?.backgroundColor = UIColor.clear
-        cell.textLabel?.text = toDoItems[indexPath.row].text
+        //cell.textLabel?.backgroundColor = UIColor.clear
+        //cell.textLabel?.text = toDoItems[indexPath.row].text
+        cell.tableIndex = indexPath
+        cell.delegate = self
+        cell.toDoItem = toDoItems[indexPath.row]
         return cell
     }
     
@@ -79,6 +82,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 }
 
 extension ViewController {
+    
+    func toDoItemDeleted(todoItem: ToDoItem, index: IndexPath) {
+        toDoItems.remove(at: index.row)
+        tableView.beginUpdates()
+        tableView.deleteRows(at: [index], with: .fade)
+        tableView.endUpdates()
+        tableView.reloadData()
+    }
     
     ///Utility functions:
     func colorForIndex(index: Int) -> UIColor {
